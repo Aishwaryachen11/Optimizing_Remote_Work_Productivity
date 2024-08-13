@@ -59,6 +59,7 @@ Optimize Resource Allocation: By knowing which features are most important, orga
 
 ### **IMPLEMENTATION**
 
+Use this link to access with the notebook in Google Colab : [Open Colab Notebook](https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/RW_Feature_Importance_Analysis.ipynb)
 
 Implementing the ensemble algorithms, such as the Balanced Random Forest Classifier and Easy Ensemble AdaBoost classifier, to identify which features are most important in predicting productivity_remote_vs_office.
 
@@ -92,16 +93,19 @@ Combined Reports: The reports from both classifiers are combined into a single D
 
 Here are the results from the Random Forest and AdaBoost classifiers:
 
-Classification Report - Random Forest
-Overall Accuracy: 39%
-Weighted F1-Score: 35%
-Precision and Recall: The model has varying precision and recall across different classes, with better performance for the class representing "same productivity" compared to other classes.
-Classification Report - AdaBoost
-Overall Accuracy: 39%
-Weighted F1-Score: 37%
-Precision and Recall: Similar to the Random Forest, with slightly better performance in certain classes but still quite variable.
-Observations:
-Both models show moderate performance, which may be due to the complexity and variability in the target variable. Feature importance can help identify which factors are driving these predictions, even if the models themselves aren't highly accurate.
+**Classification Report - Random Forest:**
+Overall Accuracy: 32%
+Weighted F1-Score: 33.68%
+Precision and Recall: The model exhibits varying precision and recall across different classes, with notably better performance for the class representing "same productivity" (Class 3). However, the precision and recall for other classes, such as those representing lower or higher productivity levels, are considerably lower, indicating that the model struggles to differentiate between these classes effectively.
+
+**Classification Report - AdaBoost:**
+Overall Accuracy: 32%
+Weighted F1-Score: 33.83%
+Precision and Recall: Similar to the Random Forest, the AdaBoost model shows variability in precision and recall across different classes. While it performs slightly better in some cases compared to the Random Forest, particularly for the class representing "same productivity" (Class 3), it still faces challenges in accurately predicting the other classes.
+
+**Observations:**
+Both models demonstrate moderate performance, which could be attributed to the complexity and variability inherent in the target variable. The relatively low accuracy and F1-scores suggest that the models may have difficulty distinguishing between different productivity levels.
+Despite these challenges, the models can still offer valuable insights, particularly when combined with feature importance analysis. Identifying the most influential factors driving the predictions could help improve model performance and provide actionable recommendations for optimizing remote work productivity policies.
 
 **Feature Importance Analysis:**
 Extract and visualize feature importance from both models.
@@ -135,3 +139,124 @@ Monitor and Optimize Remote Working Hours: Regularly review how remote working h
 
 **Conclusion:**
 Both the Balanced Random Forest and Easy Ensemble AdaBoost algorithms highlight similar features as key drivers of productivity differences between remote and in-person work. Age, remote working hours, and the balance between work and personal time are consistently important. These insights suggest that while remote work can offer significant benefits, its success largely depends on how well employees manage their time and balance their work and personal responsibilities. Organizations should tailor their remote work policies to these factors to maximize productivity and employee satisfaction.
+
+### **Exploratory Data Analysis**
+
+Use this link to access with the notebook in Google Colab : [Open Colab Notebook](https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Exploratory_Data_Analysis.ipynb)
+
+**Distribution of Respondents by Productivity (Pie Chart):**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Distribution%20of%20Repondents%20by%20Productivity.png" alt="Description" width="400"/>
+
+Insight: The majority of respondents (37.2%) feel "much more productive" when working remotely, followed by 25.4% who report "same productivity." Only a small fraction (4.9%) feel "much less productive."
+Recommendation: Organizations should promote remote work as it appears to enhance productivity for a significant portion of the workforce. However, it's also important to identify and support those who struggle with remote work, offering them resources or the option to work in-person if needed.
+
+**Best Hybrid Configurations:**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Best%20Hybird%20Configuration.png" alt="Description" width="350"/>
+
+Insight: The bar chart displays the average hours worked in-person, remotely, and the total working hours, categorized by the number of actual remote days. Employees working 0-1 remote days have the highest total working hours, indicating a potential overwork scenario when they primarily work in-person. However, as remote days increase, total working hours decrease slightly, suggesting a better work-life balance.
+Recommendation: Organizations should consider promoting hybrid work arrangements with 2-3 remote days per week. This setup seems to offer a balance between in-person and remote work while maintaining sustainable total working hours. Additionally, monitoring work hours for those with fewer remote days can prevent overwork and burnout.
+
+**AGE AND GENDER ANALYSIS**
+
+**Respondents by Age Group and Gender:**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Best%20Hybird%20Configuration.png" alt="Description" width="350"/>
+
+Insight: The stacked bar chart shows the gender distribution across different age groups. Across most age groups, there is a higher percentage of male respondents compared to female respondents. The gender gap is narrower in the younger age groups (20-35), with a more balanced distribution, but it widens significantly in the older age groups (50-65), where male respondents dominate.
+Recommendation: Organizations should consider implementing targeted gender diversity initiatives, particularly focusing on the older age groups where there is a noticeable gender imbalance. Additionally, mentoring programs could be beneficial for younger females to support career progression and leadership opportunities.
+
+**Household Distribution (Bar Chart):**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Household%20Distribution.png" alt="Description" width="350"/>
+
+Insight: The chart shows that most respondents live in households with children, particularly "couple with dependent children" and "couple with no dependent children," followed by single-person households.
+Recommendation: Remote work policies should consider household composition, offering flexibility for parents who may need to manage childcare alongside work. Additionally, single-person households might benefit from social interaction initiatives to prevent feelings of isolation during remote work.
+
+**Generation Distribution:**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Generation.png" alt="Description" width="350"/>
+
+Insight: The pie chart reveals that nearly half of the respondents (48.2%) are from Generation X, followed by Millennials at 30.3%, Boomers+ at 19.9%, and a small percentage (1.6%) from Gen Z. This distribution indicates that the workforce is primarily composed of Gen X and Millennials, with fewer younger workers.
+Recommendation: Organizations should tailor their engagement strategies to the needs and preferences of Gen X and Millennials, who make up the majority of the workforce. However, it is also important to develop recruitment and retention strategies to attract younger talent from Gen Z, ensuring a balanced generational mix and fostering innovation.
+
+**PRODUCTIVITY ANALYSIS**
+
+**Productivity by Org Preparedness:**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Productivity%20by%20Org%20Prepardness.png" alt="Description" width="350"/>
+
+Insight: The heatmap shows a strong correlation between organizational preparedness for remote work and productivity. Employees who perceive their organization as well-prepared ("strongly agree" or "somewhat agree") are more likely to report higher productivity levels. Conversely, those in less prepared organizations tend to report lower productivity.
+Recommendation: Organizations should focus on enhancing their readiness for remote work by investing in necessary infrastructure, training, and support. Regular assessments of organizational preparedness can help identify areas for improvement, ensuring that employees feel supported and productive in remote environments.
+
+**Productivity by Ease of Collaboration:**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Productivity%20by%20Ease%20of%20Collaboration.png" alt="Description" width="350"/>
+
+Insight: The chart highlights the relationship between the ease of collaboration and productivity levels. Respondents who find remote work collaboration easy tend to report higher productivity, with a significant number indicating "much more productive" or "same productivity." In contrast, those who find collaboration difficult are more likely to report lower productivity.
+Recommendation: Investing in robust collaboration tools and training can significantly enhance productivity in remote work settings. Organizations should prioritize making collaboration easy, whether through better communication platforms, regular team meetings, or collaboration training, to boost overall productivity.
+
+**Productivity by Seniority (Bar Chart):**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Prodctivity%20by%20Seniority.png" alt="Description" width="350"/>
+
+Insight: Employees with more than 5 years at their job report "same productivity" more frequently, while newer employees (1-5 years) report a mix of productivity levels. This suggests that seniority might be a stabilizing factor in maintaining productivity during remote work.
+Recommendation: Senior employees might need less supervision and more autonomy, whereas newer employees could benefit from more structured support and mentorship. Tailoring remote work policies to different levels of seniority could help optimize productivity across the organization.
+
+**ORGANIZATION SIZE VS REMOTE HOURS**
+
+**Average Monthly Remote Work Hours per Org Size:**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Avg%20monthly%20remote%20work%20Hour%20per%20Org%20Size.png" alt="Description" width="350"/>
+
+Insight: The graph indicates that as the size of the organization increases, so do the average monthly remote work hours per employee. For example, in organizations with 200+ employees, the average monthly remote work hours are around 33.08 hours, compared to 28 hours in smaller organizations (1-4 employees).
+Recommendation: Larger organizations should leverage their resources to support remote work through advanced technologies, employee training, and flexible work policies. Smaller organizations may need to gradually adopt remote work, ensuring they have the necessary infrastructure and support systems.
+
+**Org of 200+: Remote vs. In-Person Work Hours:**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Org%20200-%20Remote%20Vs%20In-person%20Work%20Hours.png" alt="Description" width="350"/>
+
+Insight: In organizations with 200+ employees, workers spend slightly more hours working remotely (49,322 hours) compared to in-person (47,015 hours) each month. This reflects a trend where larger organizations are likely to have more established remote work practices.
+Recommendation: For large organizations, maintaining a balance between remote and in-person work is critical. While remote work is efficient, it should be balanced with in-person interactions to foster team collaboration and company culture. Organizations might also consider strategies to optimize remote working hours, ensuring they don't contribute to burnout.
+
+**REMOTE WORK PREFERENCE**
+
+**Relative Productivity by Actual Number of Remote Days (Heatmap):**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Relative%20Productivity%20by%20Actual%20Number%20of%20Remote%20Days.png" alt="Description" width="350"/>
+
+Insight: The heatmap shows that employees working 4-5 remote days tend to report the highest productivity, with 540 respondents indicating "same productivity" and 364 indicating "much more productive." Fewer remote days generally correlate with lower productivity levels.
+Recommendation: Encourage employees to adopt a work schedule with 4-5 remote days if it aligns with their role and responsibilities. This configuration appears to be the most productive, according to the data. However, offering flexibility and support for different remote day configurations is also crucial.
+
+**Relative Productivity by Preferred Number of Remote Days (Heatmap):**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Relative%20Productivity%20by%20Preferred%20Number%20of%20Remote%20Days.png" alt="Description" width="350"/>
+
+Insight: Employees who prefer 4-5 remote days show the highest productivity, with 395 respondents indicating they are "much more productive" under this arrangement. However, productivity levels vary, with some employees still preferring fewer remote days.
+Recommendation: Organizations should focus on providing flexibility, especially for those who prefer more remote days, as this seems to correlate with higher productivity. Tailoring remote work policies to individual preferences can maximize productivity and employee satisfaction.
+
+**Productivity Ratings by Number of Preferred Remote Days (Pie Chart)**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Productivity%20Ratings%20by%20Number%20of%20Preferred%20Remote%20Days.png" alt="Description" width="350"/>
+
+Insight: The chart shows that 26.6% of respondents prefer working 2-3 remote days, while 26.5% prefer 4-5 remote days. There’s a balanced distribution across other preferences, with only 4.5% not providing a preference.
+Recommendation: Organizations should consider offering flexibility in remote work schedules, allowing employees to choose the number of remote days that best suit their productivity and personal lives. This can increase job satisfaction and overall productivity.
+
+**TIME SPENT**
+
+ **Average Hours Spent (In-Person vs. Remote) (Pie Charts):**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Average%20Hours%20Spent(In%20Person%20Vs%20Remote).png" alt="Description" width="350"/>
+ 
+Insight: The comparison between in-person and remote work reveals that employees spend a higher percentage of their time on work when remote (50.5%) compared to in-person (48.7%). However, remote work also allows for more personal/family time (27.4%) than in-person work (23.5%).
+Recommendation: While remote work increases work time, it also enhances personal/family time, which is beneficial for employee well-being. Organizations should encourage employees to maintain this balance, perhaps by offering flexible work schedules that allow for personal and family commitments.
+
+**Average Hours Saved (Remote vs. In-Person):**
+
+<img src="https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Images/Average%20Hours%20Saved(Remote%20Vs%20In-person).png" alt="Description" width="350"/>
+
+Insight: The graph shows that employees save approximately 1.2 hours on commuting when working remotely, which is the most significant time savings. However, the time saved from commuting is partly reallocated to personal/family time (about 0.6 hours) and domestic responsibilities (about 0.3 hours). Interestingly, there is a minor increase in working hours.
+Recommendation: Organizations should recognize the substantial time savings from reduced commuting and encourage employees to use this time for personal well-being, family, or other life-enhancing activities. Additionally, to prevent overwork, organizations might consider monitoring remote working hours and promoting a healthy work-life balance.
+
+These insights and recommendations provide a comprehensive understanding of how different factors such as age, gender, work arrangements, collaboration, and organizational preparedness influence productivity and engagement in remote work environments. By addressing these areas, organizations can optimize their remote work policies to enhance overall productivity and employee satisfaction.
