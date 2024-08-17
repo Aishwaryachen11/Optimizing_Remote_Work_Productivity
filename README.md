@@ -18,7 +18,7 @@ Merging of the data sets Our first step in preparing the data for analysis was m
 
 **Cleaning the Data:**
 
-Use this link to access with the notebook in Google Colab : [Open Colab Notebook](https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity)
+Use this link to access with the notebook in Google Colab : [Open Colab Notebook](https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Merging_%26_Data_Cleaning.ipynb)
 
 Below is the summary of steps followed for data cleaning and merging:
 
