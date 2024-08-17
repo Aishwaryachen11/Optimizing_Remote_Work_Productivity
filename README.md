@@ -59,7 +59,7 @@ Optimize Resource Allocation: By knowing which features are most important, orga
 
 ### **IMPLEMENTATION**
 
-Use this link to access with the notebook in Google Colab : [Open Colab Notebook](https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/RW_Feature_Importance_Analysis.ipynb)
+Use this link to access with the notebook in Google Colab : [Open Colab Notebook](https://github.com/Aishwaryachen11/Optimizing_Remote_Work_Productivity/blob/main/Merging_%26_Data_Cleaning.ipynb)
 
 Implementing the ensemble algorithms, such as the Balanced Random Forest Classifier and Easy Ensemble AdaBoost classifier, to identify which features are most important in predicting productivity_remote_vs_office.
 
